@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Directive v model in checkbox</h4>
+    <div id="app">
+        <label for="">Movie</label>
+        <input type="checkbox" name="" id="" value="movie" v-model="checkbox">
+        <label for="">Traveling</label>
+        <input type="checkbox" name="" id="" value="traveling" v-model="checkbox">
+        <label for="">Reading</label>
+        <input type="checkbox" name="" id="" value="reading" v-model="checkbox">
+        <br>
+        <p>My Hobbies are : {{ checkbox }}</p>
+        <h5>Make Style & using Looping "v-for="choice in  checkbox" same as "foreach ($checkbox as $choice)</h5>
+        <ul>
+            <li v-for="choice in  checkbox">{{ choice }}</li>
+        </ul>
+    </div>
+
+    <!-- For Developmen JS -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/directive-v-model-in-checkbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Directive v-model in select dropdown</h4>
+    <div id="app">
+        <label for="">Choice your favorite programming language:</label>
+        <select v-model="select">
+            <option value="" disabled>choice your programming</option>
+            <option value="javascript">Javascript</option>
+            <option value="php">PHP</option>
+            <option value="C#">C#</option>
+        </select>
+
+        <br>
+        <p>Your favorite programming is : {{ select }}</p>
+        
+        <br><br>
+
+        <h5>Using Select Multiple</h5>
+        <label for="">Choice your favorite programming language:</label>
+        <select v-model="select_multiple" multiple>
+            <option value="" disabled>choice your programming</option>
+            <option value="javascript">Javascript</option>
+            <option value="php">PHP</option>
+            <option value="C#">C#</option>
+        </select>
+
+        <br>
+        Your favorite programming is :
+        <ul>
+            <li v-for="sel in select_multiple">{{ sel }}</li>
+        </ul>
+
+  
+    </div>
+    <!-- For Developmen JS -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/directive-v-model-in-select-dropdown.js"></script>
+</body>
+</html>

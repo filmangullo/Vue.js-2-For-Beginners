@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Data Type - Array</h4>
+    <div id="app">
+        <h5>Call Data using Manuall Index</h5>
+        <ul>
+            <li>{{ vehicles[0] }}</li>
+        </ul>
+        <br>
+        <h5>Call Data using Foreach</h5>
+        <ul>
+            <li v-for="vehicle in vehicles">
+                {{ vehicle }}
+            </li>
+        </ul>
+        
+        <br>
+        <h5>Call, Input and Deleth using Methods</h5>
+        <label for="">Add vehicle : </label>
+        <input type="text" v-model="content">
+        <button @click="addVehicle">Add</button>
+        <br>
+        <ul>
+            <li v-for="(vehicle, index) in vehicles">
+                <button @click="removeVehicle(index)">x</button>
+                {{ vehicle }}
+            </li>
+        </ul>
+    </div>
+    <!-- For Developmen JS -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/data-type-array.js"></script>
+</body>
+</html>

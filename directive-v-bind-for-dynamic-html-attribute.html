@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="imgFile" alt="">
+        <br>
+        <a v-bind:href="link">{{ link }}</a>
+        <br>
+        <p v-bind:style="{color: colorFont}">{{ colorFont}} Font</p>
+        <br>
+        <p v-bind:style="styleFont">Test Style </p>
+    </div>
+    <!-- For Developmen JS -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/directive-v-bind-for-dynamic-html-attribute.js"></script>
+</body>
+</html>

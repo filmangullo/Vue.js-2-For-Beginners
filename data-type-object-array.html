@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, h5 {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <div id="app">
+        <h5>Using Table</h5>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Brand</th>
+                <th>Color</th>
+            </tr>
+            <tr v-for="vehicle in vehicles">
+                <td>
+                    {{ vehicle.type }}
+                </td>
+                <td>
+                    {{ vehicle.brand }}
+                </td>
+                <td>
+                    {{ vehicle.color }}
+                </td>
+            </tr>
+        </table>
+        <h5>Using list</h5>
+        <ul>
+            <li v-for="vehicle in vehicles">
+                Type: {{ vehicle.type }}
+                Brand: {{ vehicle.brand }}
+                Color : {{ vehicle.color }}
+            </li>
+        </ul>
+        <br>
+        <ul>
+            <li v-for="value in object">
+                {{ value }}
+            </li>
+        </ul>
+    </div>
+    <!-- For Developmen JS -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/data-type-object-array.js"></script>
+</body>
+</html>
