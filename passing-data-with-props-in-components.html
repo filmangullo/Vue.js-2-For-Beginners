@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue.js Passing Data with Props in Components</title>
 </head>
 <body>
-     <!-- For Developmen JS -->
-     <script src="assets/vendor/vue.js"></script>
-     <script src="assets/js/app.js"></script>
+    <h4>Vue.js Passing Data with Props in Components</h4>
+    <div id="app">
+        <blog-post 
+            v-for="post in posts" :key="post.id"
+            :post="post"    
+        >
+
+        </blog-post>
+    </div>
+    <!-- For Developmen JS -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/passing-data-with-props-in-components.js"></script>
 </body>
 </html>
